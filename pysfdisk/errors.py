@@ -15,6 +15,26 @@
 # You should have received a copy of the GNU General Public License
 # along with pysfdisk.  If not, see <http://www.gnu.org/licenses/>
 
-from pysfdisk.block_device import BlockDevice
-from pysfdisk.partition import Partition
-import pysfdisk.errors
+
+class PysfdiskException(Exception):
+    """Base exception for pysfdisk"""
+
+    pass
+
+
+class NotRunningAsRoot(PysfdiskException):
+    """Command is not running as root"""
+
+    pass
+
+
+class BlockDeviceDoesNotExist(PysfdiskException):
+    """Block device does not exist"""
+
+    pass
+
+
+class MissingAttribute(PysfdiskException):
+    """A required attribute has not been set"""
+
+    pass
