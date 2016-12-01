@@ -17,7 +17,9 @@
 # You should have received a copy of the GNU General Public License
 # along with pysfdisk.  If not, see <http://www.gnu.org/licenses/>
 
-from setuptools import setup
+from setuptools import setup, find_packages
+
+import pysfdisk
 
 with open('VERSION', 'r') as version_fh:
     version = version_fh.read()
@@ -28,5 +30,6 @@ setup(
     license='GNU GENERAL PUBLIC LICENSE',
     author='Matt Comben',
     platforms='any',
-    author_email='matthew@dockstudios.co.uk'
+    author_email='matthew@dockstudios.co.uk',
+    packages=list(find_packages(pysfdisk.__path__, pysfdisk.__name__))
 )
