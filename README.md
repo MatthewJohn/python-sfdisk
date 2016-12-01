@@ -1,6 +1,6 @@
 # PYsfdisk
 
-A python library for interactions with sfdisk.
+A Python API for linux sfdisk utility
 
 Note: This project is pre-alpha
 
